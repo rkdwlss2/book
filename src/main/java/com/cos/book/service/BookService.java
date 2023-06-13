@@ -38,8 +38,8 @@ public class BookService {
         Book bookEntity = bookRepository.findById(id)
                 .orElseThrow(()->new IllegalArgumentException("id를 확인해주세요!"))
                 ; //영속화
-        book.setTitle(book.getTitle());
-        book.setAuthor(book.getAuthor());
+        bookEntity.setTitle(book.getTitle());
+        bookEntity.setAuthor(book.getAuthor());
         return bookEntity;
     }
 
